@@ -5,90 +5,6 @@
     overflow-x: hidden;
 }
 
-main {
-    background-color: #02111B;
-    min-height: 90vh;
-    overflow-y: scroll;
-    width: 110vw;
-}
-
-header {
-    margin: 0 !important;
-    background-color: #01070C;
-    height: 10vh;
-    width: 100%;
-    padding-left: 2rem;
-    display: flex;
-    align-items: center;
-}
-
-header>img {
-    position: absolute;
-    right: 4vw;
-}
-
-h1 {
-    margin-left: 2rem;
-    overflow: hidden;
-}
-
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    display: none;
-    visibility: hidden;
-}
-
-.bar {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    width: 50px;
-    height: 40px;
-}
-
-.bar span {
-    position: absolute;
-    width: 45px;
-    height: 7px;
-    background: #f1faee;
-    border-radius: 100px;
-    display: inline-block;
-    transition: 0.3s ease;
-    left: 0;
-}
-
-.bar span.top {
-    top: 0;
-}
-
-.bar span.middle {
-    top: 17px;
-}
-
-.bar span.bottom {
-    bottom: 0;
-}
-
-input[type]:checked~span.top {
-    transform: rotate(45deg);
-    transform-origin: top left;
-    width: 48px;
-    left: 5px;
-}
-
-input[type]:checked~span.bottom {
-    transform: rotate(-45deg);
-    transform-origin: top left;
-    width: 48px;
-    bottom: -1px;
-    box-shadow: 0 0 10px #495057;
-}
-
-input[type]:checked~span.middle {
-    transform: translateX(-20px);
-    opacity: 0;
-}
-
 #dessusBareFlotaison {
     display: grid;
     place-items: center;
@@ -133,14 +49,14 @@ h2 {
 
 .arrow {
     position: absolute;
-    top: 92vh;
+    top: 88vh;
     left: 0;
     right: 0;
     margin-inline: auto;
-    display: inline-block;
-    width: 4rem;
-    height: 3rem;
-    overflow-y: hidden;
+    display: inline-flex;
+    width: 6rem;
+    height: 5rem;
+    overflow: visible;
 }
 
 .arrow::before,
@@ -153,6 +69,7 @@ h2 {
     height: 45px;
     border-radius: 9999px;
     background-color: #a7ac09;
+    box-shadow: 0px 0px 10px 2px #a7ac09;
     transform-origin: 50% calc(100% - 2px);
 }
 
@@ -170,4 +87,52 @@ h2 {
     border-top: 2px solid white;
     z-index: 1;
     background-color: #010c13;
+    padding-top: 5rem;
+}
+
+.item {
+    background-color: #001624;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    user-select: none;
+    border: 2px solid #002135;
+    margin: 3rem 0;
+}
+
+.item * {
+    overflow: hidden;
+}
+
+.images .imgContainer {
+    background-color: #002841;
+    height: 5rem;
+    margin: 5px;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    border: 2px solid #002f4e;
+    transition: all 0.1s;
+}
+
+.images .imgContainer:hover {
+    background-color: #003557;
+    transition: all 0.1s;
+    transform: scale(1.04);
+}
+
+.images img {
+    object-fit: cover;
+    width: 4rem;
+    margin: 2px;
+}
+
+.images {
+    padding: 0 2rem;
+}
+
+h4 {
+    margin-bottom: 2rem !important;
 }
