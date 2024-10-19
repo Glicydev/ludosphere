@@ -170,7 +170,7 @@ h4 {
     width: 30vw;
     border-radius: 1rem;
     border: 2px solid rgba(0, 90, 146, 0.637);
-    filter: brightness(80%);
+    filter: brightness(90%);
 }
 
 h3 {
@@ -195,6 +195,10 @@ h3 {
 
 .finished {
     background-color: #1A9322;
+}
+
+.doing {
+    background-color: #1030B2;
 }
 
 .desc {
