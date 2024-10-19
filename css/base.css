@@ -1,3 +1,4 @@
+/* General */
 header {
     margin: 0 !important;
     background-color: #01070C;
@@ -7,6 +8,13 @@ header {
     display: flex;
     align-items: center;
     user-select: none;
+}
+
+main {
+    background-color: #02111B;
+    min-height: 90vh;
+    overflow-y: scroll;
+    width: 110vw;
 }
 
 header>img {
@@ -19,6 +27,7 @@ h1 {
     overflow: hidden;
 }
 
+/* Burger icon */
 input[type="checkbox"] {
     -webkit-appearance: none;
     display: none;
@@ -78,11 +87,4 @@ input[type]:checked~span.bottom {
 input[type]:checked~span.middle {
     transform: translateX(-20px);
     opacity: 0;
-}
-
-main {
-    background-color: #02111B;
-    min-height: 90vh;
-    overflow-y: scroll;
-    width: 110vw;
 }

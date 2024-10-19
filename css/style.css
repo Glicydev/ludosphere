@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* General */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +8,22 @@
     overflow-x: hidden;
 }
 
+/* Titles */
 h1, h2 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    overflow: visible;
+}
+
+h2 {
+    font-size: 6rem !important;
+}
+
+h3, h4 {
+    overflow: visible;
+}
+
+h4 {
+    margin-bottom: 2rem !important;
 }
 
 #dessusBareFlotaison {
@@ -21,11 +37,6 @@ h1, h2 {
     background-size: 1.5em 1.5em;
     overflow: hidden;
     user-select: none;
-}
-
-h2 {
-    font-size: 6rem !important;
-    overflow: hidden;
 }
 
 .title {
@@ -143,10 +154,6 @@ h2 {
     padding: 0 2rem;
 }
 
-h4 {
-    margin-bottom: 2rem !important;
-}
-
 .projects {
     margin-top: 10vh !important;
     border-top: 2px solid #0036578c;
@@ -173,12 +180,9 @@ h4 {
     filter: brightness(90%);
 }
 
-h3 {
-    overflow: hidden;
-}
-
 #projectsTitle {
     text-align: center;
+    margin: 0;
     margin-bottom:  5rem;
 }
 
@@ -191,6 +195,7 @@ h3 {
     display: grid;
     place-items: center;
     margin-bottom: 1rem;
+    user-select: none;
 }
 
 .finished {
