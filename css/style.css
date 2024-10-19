@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
     color: white;
     overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 #dessusBareFlotaison {
@@ -15,6 +20,7 @@
     background-image: linear-gradient(#010c1344 .1em, transparent .1em), linear-gradient(90deg, #010c1344 .1em, transparent .1em);
     background-size: 1.5em 1.5em;
     overflow: hidden;
+    user-select: none;
 }
 
 h2 {
@@ -144,12 +150,14 @@ h4 {
 .projects {
     margin-top: 10vh !important;
     border-top: 2px solid #0036578c;
+    padding-top: 10vh;
 }
 
 .project {
+    position: relative;
     overflow: hidden;
     height: 55vh;
-    width: 50vw !important;
+    width: 45vw !important;
     background-color: #001624;
     border: 2px solid #002135;
     border-radius: 1rem;
@@ -175,15 +183,56 @@ h3 {
 }
 
 .finished, .doing, .planned {
-    width: 50vw;
+    width: 100%;
     height: 2rem;
     font-size: 1.5rem;
     overflow: hidden;
     line-height: 0rem;
     display: grid;
     place-items: center;
+    margin-bottom: 1rem;
 }
 
 .finished {
     background-color: #1A9322;
+}
+
+.desc {
+    margin-top: 1rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.2rem;
+}
+
+.date {
+    position: absolute;
+    bottom: 1rem;
+    margin-left: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.goToPage {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color: #002B46;
+    border: 2px solid #003758;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.goToPage img {
+    width: 3rem;
+    filter: invert(90%);
+}
+
+.goToPage:hover {
+    background-color: #003557;
+    transition: all 0.1s;
 }
