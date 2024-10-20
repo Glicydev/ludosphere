@@ -26,6 +26,16 @@ h4 {
     margin-bottom: 2rem !important;
 }
 
+.projectTitle {
+    margin-bottom: 2rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+/* Dessus de la barre de flotaison */
 #dessusBareFlotaison {
     position: inherit;
     display: grid;
@@ -37,11 +47,6 @@ h4 {
     background-size: 1.5em 1.5em;
     overflow: hidden;
     user-select: none;
-}
-
-.title {
-    display: flex;
-    align-items: center;
 }
 
 .inter {
@@ -101,6 +106,8 @@ h4 {
 .arrow::after {
     transform: rotate(-45deg);
 }
+
+/* Dessous de la barre de flotaison */
 
 .dessous {
     height: auto;
