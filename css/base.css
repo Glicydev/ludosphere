@@ -13,14 +13,16 @@ body {
 }
 
 /* Titles */
+h1 {
+    margin-left: 2rem;
+    overflow: hidden;
+    font-size: 2.5rem !important;
+}
+
 h1,
 h2 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     overflow: visible;
-}
-
-h2 {
-    font-size: 6rem !important;
 }
 
 h3,
@@ -55,11 +57,6 @@ main {
 header>img {
     position: absolute;
     right: 4vw;
-}
-
-h1 {
-    margin-left: 2rem;
-    overflow: hidden;
 }
 
 /* Burger icon */
@@ -137,7 +134,7 @@ input[type]:checked~span.middle {
     background-color: rgb(189, 163, 19);
     text-decoration: none;
     color: white;
-    line-height: 2rem;
+    line-height: 1.8rem;
     border-radius: 5px;
     overflow: visible;
     box-shadow: 0 0 5px 2px rgb(189, 163, 19);
@@ -163,4 +160,34 @@ footer {
 
 #footerText {
     font-size: 1.3rem;
+}
+
+#goToTop {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: #082944;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: clamp(4rem, 5vw, 5rem);
+}
+
+#goToTop img {
+    filter: invert();
+    width: 80%;
+    margin: 0 0 10% 10%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .donate {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #goToTop {
+        bottom: 20vh;
+        width: clamp(2rem, 10vw, 5rem);
+    }
 }

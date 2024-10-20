@@ -1,15 +1,48 @@
+:root {
+    --circle-width-small: 25vw;
+    --circle-width-medium: 30vw;
+    --circle-width-large: 40vw;
+}
+
 .projectTitle {
     margin-bottom: 2rem;
 }
 
 .title {
-    display: flex;
-    align-items: center;
+    white-space: nowrap;
+}
+
+h2 {
+    font-size: clamp(2rem, 10vw, 6rem) !important;
+    width: auto;
+    text-align: center;
+    display: inline-block;
+    overflow: visible;
+    white-space: nowrap;
+    margin: 0;
+    margin-right: 3vw;
+}
+
+h4 {
+    font-size: clamp(1.5rem, 2vw, 1.5rem) !important;
+}
+
+.presentation h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.presentation {
+    text-align: center;
+}
+
+.item p {
+    font-size: 1.5rem;
 }
 
 /* Dessus de la barre de flotaison */
 #dessusBareFlotaison {
-    position: inherit;
+    position: relative;
     display: grid;
     place-items: center;
     height: 90vh;
@@ -22,39 +55,40 @@
 }
 
 .inter {
+    font-size: clamp(5rem, 15vw, 10rem) !important;
     font-size: 10rem;
-    margin-left: 2vw;
-    margin-bottom: 7vh;
     color: #588dff;
-    margin-right: 7rem;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .circleOne {
-    width: 25vw;
+    width: var(--circle-width-small);
     position: absolute;
-    right: -3px;
-    top: 9.65vh;
+    right: 9vw;
+    top: 0;
 }
 
 .circleTwo {
-    width: 25vw;
+    width: var(--circle-width-small);
     position: absolute;
     rotate: 180deg;
     left: -3px;
     bottom: -4px;
 }
 
-.arrow {
+
+.arrowContainer {
     position: absolute;
-    top: 88vh;
-    left: 0;
-    right: 0;
+    top: 79vh;
     margin-inline: auto;
-    display: inline-flex;
-    width: 6rem;
-    height: 5rem;
     overflow: visible;
+    width: 100vw;
+    height: 5rem;
+    justify-self: flex-start;
+}
+
+.arrow {
+    width: 5rem;
 }
 
 .arrow::before,
@@ -100,6 +134,7 @@
     user-select: none;
     border: 2px solid #002135;
     margin: 3rem 0;
+    box-shadow: 0 0 6px 1px #002135;
 }
 
 .item * {
@@ -115,6 +150,8 @@
     border-radius: 1rem;
     border: 2px solid #002f4e;
     transition: all 0.1s;
+    min-width: 5.5rem !important;
+    max-width: 11rem !important;
 }
 
 .images .imgContainer:hover {
@@ -224,4 +261,20 @@
 .goToPage:hover {
     background-color: #003557;
     transition: all 0.1s;
+}
+
+@media only screen and (max-width: 900px) {
+    .imagesIn, .presentation {
+        width: 60vw !important;
+    }
+
+    .circleOne, .circleTwo {
+        width: var(--circle-width-medium);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .circleOne, .circleTwo {
+        width: var(--circle-width-large);
+    }
 }

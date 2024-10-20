@@ -1,7 +1,3 @@
-<?php
-require_once './elements.php'
-?>
-
 <!DOCTYPE html>
 <!-- 
  Created by Ludovic, if you read this, you have to know that you can't just copy my work, thank you.
@@ -24,23 +20,35 @@ require_once './elements.php'
 </head>
 
 <body>
-    <?= buildHeader() ?>
+    <header>
+        <label class="bar" for="check">
+            <input type="checkbox" id="check">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </label>
+        <h1>Ludosphere.ch</h1>
+        <a href="https://donate.stripe.com/9AQaHLb5xfbB9nGbII" class="donate" target="_blank">Donate</a>
+        <img src="./img/logoExample.png" alt="logo">
+    </header>
     <main>
+        <div id="goToTop"><img src="img/arrowTop.png"></img></div>
         <div id="dessusBareFlotaison">
             <img src="./img/circle.png" alt="circleOne" class="circleOne">
             <div class="title">
-                <h2>Who am I</h2>
-                <div class="inter">?</div>
+                <h2>Who am I <span class="inter">?</span></h2>
             </div>
             <img src="./img/circle.png" alt="circleTwo" class="circleTwo">
-            <div class="arrow"></div>
+            <div class="arrowContainer">
+                <div class="arrow"></div>
+            </div>
         </div>
         <div class="dessous row-9 d-flex flex-column align-items-center">
-            <div class="item col-4">
+            <div class="item col-5 presentation">
                 <h3>Hello !</h3>
                 <p>I am Ludovic, I'm actually 16 years old and I study in CFPT-I in Geneva.</p>
             </div>
-            <div class="item col-5">
+            <div class="item col-5 imagesIn">
                 <h4>There are the languages that i know :</h4>
                 <div class="images">
                     <div class="row d-flex align-items-center">
@@ -82,7 +90,7 @@ require_once './elements.php'
                     </div>
                 </div>
             </div>
-            <div class="item col-5">
+            <div class="item col-5 imagesIn">
                 <h4>There are the technologies i use :</h4>
                 <div class="images">
                     <div class="row d-flex align-items-center">
