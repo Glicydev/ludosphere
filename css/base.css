@@ -1,4 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 /* General */
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #010c13 !important;
+}
+
+/* Titles */
+h1,
+h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    overflow: visible;
+}
+
+h2 {
+    font-size: 6rem !important;
+}
+
+h3,
+h4 {
+    overflow: visible;
+}
+
+h4 {
+    margin-bottom: 2rem !important;
+}
+
 header {
     margin: 0 !important;
     background-color: #01070C;
@@ -8,10 +42,12 @@ header {
     display: flex;
     align-items: center;
     user-select: none;
+    position: relative;
+
 }
 
 main {
-    background-color: #02111B;
+    background-color: #010c13;
     min-height: 90vh;
     overflow-y: scroll;
     width: 110vw;
@@ -87,4 +123,45 @@ input[type]:checked~span.bottom {
 input[type]:checked~span.middle {
     transform: translateX(-20px);
     opacity: 0;
+}
+
+
+.donate {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 6rem;
+    height: 2rem;
+    background-color: rgb(189, 163, 19);
+    text-decoration: none;
+    color: white;
+    line-height: 2rem;
+    border-radius: 5px;
+    overflow: visible;
+    box-shadow: 0 0 5px 2px rgb(189, 163, 19);
+    transition: all 0.2s;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.donate:hover {
+    background-color: rgb(160, 138, 14);
+    box-shadow: 0 0 5px 2px rgb(160, 138, 14);
+    transition: all 0.2s;
+}
+
+footer {
+    width: 80vw;
+    border-top: 1px solid #032236;
+    height: 7rem;
+    display: grid;
+    place-items: center;
+    margin-left: 10vw;
+}
+
+#footerText {
+    font-size: 1.3rem;
 }

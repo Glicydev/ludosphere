@@ -1,3 +1,8 @@
+const footerText = document.getElementById("footerText")
+const today = new Date()
+const year = today.getFullYear()
+footerText.innerHTML = `&copy; 2024-${year} Ludoit. All rights reserved.`
+
 // Initialize the agent on page load.
 const fpPromise = import('https://fpjscdn.net/v3/tIUMXs50DC4YHKxqwWqq')
 .then(FingerprintJS => FingerprintJS.load({
