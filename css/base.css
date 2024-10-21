@@ -166,7 +166,7 @@ footer {
 
 #goToTop {
     position: fixed;
-    right: 1rem;
+    right: 15vw;
     bottom: 1rem;
     background-color: #0a3253;
     padding: 5px;
@@ -217,6 +217,9 @@ aside {
 @media only screen and (max-width: 1000px) {
     .donate {
         display: none;
+    }
+    #goToTop {
+        right: 5vw;
     }
 }
 
