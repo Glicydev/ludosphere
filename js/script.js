@@ -3,15 +3,17 @@ const today = new Date()
 const year = today.getFullYear()
 const button = document.getElementById("goToTop");
 
-button.style.display = "none";
-
 footerText.innerHTML = `&copy; 2024-${year} Ludoit. All rights reserved.`
 
 function showScrollTopOrNot() {
-  if (window.scrollY > 1000)
-    button.style.display = "block"
-  else
-    button.style.display = "none"
+  if (window.scrollY > 1000) {
+    button.style.opacity = "1"
+    button.disabled = false;
+  }
+  else {
+    button.style.opacity = "0"
+    button.disabled = true;
+  }
 }
 
 window.addEventListener("scroll", showScrollTopOrNot)

@@ -173,12 +173,24 @@ footer {
     width: clamp(4rem, 5vw, 5rem);
     height: clamp(4rem, 5vw, 5rem);
     overflow: visible;
+    border: none;
+    transition: all 0.2s;
 }
 
 #goToTop img {
     filter: invert();
     width: 80%;
-    margin: 10% 0 0 10%;
+    transition: all 0.2s;
+}
+
+#goToTop:hover {
+    background-color: #072a46;
+    transition: all 0.2s;
+}
+
+#goToTop:hover img {
+    filter: invert(90%);
+    transition: all 0.2s;
 }
 
 @media only screen and (max-width: 1000px) {
