@@ -166,17 +166,19 @@ footer {
     position: fixed;
     right: 1rem;
     bottom: 1rem;
-    background-color: #082944;
+    background-color: #0a3253;
     padding: 5px;
     font-size: 1.2rem;
     border-radius: 10px;
     width: clamp(4rem, 5vw, 5rem);
+    height: clamp(4rem, 5vw, 5rem);
+    overflow: visible;
 }
 
 #goToTop img {
     filter: invert();
     width: 80%;
-    margin: 0 0 10% 10%;
+    margin: 10% 0 0 10%;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -188,6 +190,12 @@ footer {
 @media only screen and (max-width: 600px) {
     #goToTop {
         bottom: 20vh;
+        right: 5vw;
         width: clamp(2rem, 10vw, 5rem);
+        height: clamp(2rem, 10vw, 5rem);
+    }
+
+    #goToTop img {
+        margin-bottom: 20%;
     }
 }
