@@ -71,6 +71,7 @@ h4 {
     position: absolute;
     right: 9vw;
     top: -5px;
+    z-index: 1;
 }
 
 .circleTwo {
@@ -79,6 +80,7 @@ h4 {
     rotate: 180deg;
     left: -3px;
     bottom: -5px;
+    z-index: 1;
 }
 
 
@@ -301,5 +303,13 @@ h4 {
         left: 0;
         right: 0;
         margin-inline: auto; 
+    }
+
+    .project {
+        width: 85vw !important;
+    }
+
+    .item {
+        width: 85vw !important;
     }
 }

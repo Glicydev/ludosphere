@@ -14,7 +14,7 @@ body {
 
 /* Titles */
 h1 {
-    margin-left: 2rem;
+    margin-left: clamp(4rem, 5vw, 5rem);
     overflow: hidden;
     font-size: 2.5rem !important;
 }
@@ -74,6 +74,8 @@ input[type="checkbox"] {
     width: 50px;
     height: 40px;
     overflow: hidden;
+    z-index: 101;
+    position: fixed;
 }
 
 .bar span {
@@ -175,6 +177,7 @@ footer {
     overflow: visible;
     border: none;
     transition: all 0.2s;
+    z-index: 99;
 }
 
 #goToTop img {
@@ -193,21 +196,40 @@ footer {
     transition: all 0.2s;
 }
 
+aside {
+    width: 30vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    background-color: rgba(0, 0, 0, 0.815);
+    z-index: 100;
+    transition: all 0.2s;
+    border-right: 2px solid #021c2c;
+}
+
+@media only screen and (max-width: 1300px) {
+    aside {
+        width: 50vw;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .donate {
         display: none;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     #goToTop {
-        bottom: 20vh;
-        right: 5vw;
-        width: clamp(2rem, 10vw, 5rem);
-        height: clamp(2rem, 10vw, 5rem);
+        width: clamp(2rem, 20vw, 10rem);
+        height: clamp(2rem, 20vw, 10rem);
+        display: grid;
+        place-items: center;
+        bottom: 5rem;
     }
 
-    #goToTop img {
-        margin-bottom: 20%;
+    aside {
+        width: 100vw;
     }
 }

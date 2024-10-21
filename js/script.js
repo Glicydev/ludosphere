@@ -1,7 +1,12 @@
 const footerText = document.getElementById("footerText")
 const today = new Date()
 const year = today.getFullYear()
-const button = document.getElementById("goToTop");
+const button = document.getElementById("goToTop")
+const burgerButton = document.querySelector(".bar")
+const burgerMenu = document.querySelector("aside")
+const burgerMenuSize = burgerMenu.offsetWidth
+console.log(burgerMenuSize)
+let burgerMenuOpened = false;
 
 footerText.innerHTML = `&copy; 2024-${year} Ludoit. All rights reserved.`
 
@@ -23,6 +28,14 @@ function showScrollTopOrNot() {
     button.style.opacity = "0"
     button.disabled = true;
   }
+}
+
+function handleBurgerMenu() {
+  if (burgerMenuOpened)
+    burgerMenu.style.left = `-100vw`
+  else
+    burgerMenu.style.left = `0`
+  burgerMenuOpened = !burgerMenuOpened
 }
 
 window.addEventListener("scroll", showScrollTopOrNot)

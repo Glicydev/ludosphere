@@ -22,7 +22,7 @@
 <body>
     <header>
         <label class="bar" for="check">
-            <input type="checkbox" id="check">
+            <input type="checkbox" id="check" onclick="handleBurgerMenu()">
             <span class="top"></span>
             <span class="middle"></span>
             <span class="bottom"></span>
@@ -32,7 +32,9 @@
         <img src="./img/logoExample.png" alt="logo">
     </header>
     <main>
-        <button id="goToTop">
+        <aside>
+        </aside>
+        <button id="goToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
             <img src="img/arrowTop.png" draggable="false"></img>
         </button>
         <div id="dessusBareFlotaison">
