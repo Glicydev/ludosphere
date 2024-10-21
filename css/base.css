@@ -44,7 +44,7 @@ header {
     align-items: center;
     user-select: none;
     position: relative;
-
+    border-bottom: 2px solid #041727;
 }
 
 main {

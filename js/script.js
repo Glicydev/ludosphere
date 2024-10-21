@@ -5,6 +5,15 @@ const button = document.getElementById("goToTop");
 
 footerText.innerHTML = `&copy; 2024-${year} Ludoit. All rights reserved.`
 
+if (window.scrollY > 1000) {
+  button.style.opacity = "1"
+  button.disabled = false;
+}
+else {
+  button.style.opacity = "0"
+  button.disabled = true;
+}
+
 function showScrollTopOrNot() {
   if (window.scrollY > 1000) {
     button.style.opacity = "1"
