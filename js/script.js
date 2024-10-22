@@ -5,7 +5,6 @@ const button = document.getElementById("goToTop")
 const burgerButton = document.querySelector(".bar")
 const burgerMenu = document.querySelector("aside")
 const burgerMenuSize = burgerMenu.offsetWidth
-console.log(burgerMenuSize)
 let burgerMenuOpened = false;
 
 footerText.innerHTML = `&copy; 2024-${year} Ludoit. All rights reserved.`
