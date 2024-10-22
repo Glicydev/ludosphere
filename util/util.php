@@ -14,7 +14,6 @@ function ContactSendMail(string $from, string $message, string $username) : bool
     $headers = 'From: "' . $username . '" <' . $from . '>' . "\r\n" .
            'Reply-To: ' . $from . "\r\n" .
            'X-Mailer: PHP/' . phpversion();
-    $message = "Sent from : " . $username . " (" . $from . "), " . $message;
     
     try {
         mail("ludovic2008@outlook.com", "Envoyé via le formulaire de contact de ludosphere", $message, $headers);

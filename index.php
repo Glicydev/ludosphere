@@ -13,6 +13,7 @@ require_once './util/elements.php'
     <title>Site personnel</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/base.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="./js/script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -23,7 +24,7 @@ require_once './util/elements.php'
 </head>
 
 <body>
-    <?=placeBase()?>
+    <?= placeBase() ?>
     <main>
         <button id="goToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
             <img src="img/arrowTop.png" draggable="false"></img>
@@ -32,10 +33,11 @@ require_once './util/elements.php'
             <img src="./img/circle.png" alt="circleOne" class="circleOne" draggable="false">
             <div class="title">
                 <h2 id="whoAmI">
-                    <span>W</span><span>h</span><span>o</span> 
-                    <span>a</span><span>m</span> 
-                    <span>I</span> 
-                    <span class="inter">?</span></h2>
+                    <span>W</span><span>h</span><span>o</span>
+                    <span>a</span><span>m</span>
+                    <span>I</span>
+                    <span class="inter">?</span>
+                </h2>
             </div>
             <img src="./img/circle.png" alt="circleTwo" class="circleTwo" draggable="false">
             <div class="arrowContainer">
@@ -116,7 +118,7 @@ require_once './util/elements.php'
             </div>
             <div class="projects row d-flex flex-wrap flex-column align-items-center">
                 <h1 id="projectsTitle">Here you can see my projects :</h1>
-                <div class="project col-4">
+                <div class="project col-4 projectFromLeft">
                     <div class="doing">Under construction</div>
                     <h3 class="projectTitle">Mellowize</h3>
                     <img src="img/projets/mellowize.PNG" alt="Mellowize">
@@ -124,7 +126,7 @@ require_once './util/elements.php'
                         to have more experience in projects</div>
                     <div class="date">27-06-2024</div>
                 </div>
-                <div class="project col-4">
+                <div class="project col-4 projectFromRight">
                     <div class="finished">Finished</div>
                     <h3 class="projectTitle">Website about Servette FC</h3>
                     <img src="img/projets/servette.PNG" alt="servette FC">
@@ -134,7 +136,7 @@ require_once './util/elements.php'
                         <img draggable="false" src="img/newPage.png" alt="">
                     </a>
                 </div>
-                <div class="project col-4">
+                <div class="project col-4 projectFromLeft">
                     <div class="finished">Finished</div>
                     <h3 class="projectTitle">Wirewolf game</h3>
                     <img src="img/projets/servette.PNG" alt="wirewolf">

@@ -32,6 +32,7 @@ h2 {
     display: inline-block;
     opacity: 0;
     font-weight: bold;
+    transform: translateY(200px);
 }
 
 h4 {
@@ -72,7 +73,6 @@ h4 {
 
 .inter {
     font-size: clamp(5rem, 15vw, 10rem) !important;
-    font-size: 10rem;
     color: #588dff;
     overflow: visible;
     font-weight: normal;
@@ -142,6 +142,7 @@ h4 {
     z-index: 1;
     background-color: #010c13;
     padding-top: 5rem;
+    position: relative;
 }
 
 .item {
@@ -157,10 +158,20 @@ h4 {
     box-shadow: 0 0 6px 1px #002135;
     transition: all 0.5s;
     opacity: 0;
+    margin-right: 5rem;
 }
 
 .item * {
     overflow: hidden;
+}
+
+.sticky {
+    background-color: red;
+    width: 4rem;
+    height: 5rem;
+    position: sticky;
+    top: 10px;
+    right: 10vw;
 }
 
 .images .imgContainer {
@@ -173,7 +184,6 @@ h4 {
     border: 2px solid #002f4e;
     transition: all 0.1s;
     min-width: 5.5rem !important;
-    max-width: 11rem !important;
 }
 
 .images .imgContainer:hover {
@@ -196,6 +206,7 @@ h4 {
     margin-top: 10vh !important;
     border-top: 2px solid #0036578c;
     padding-top: 10vh;
+    overflow: visible;
 }
 
 .project {
@@ -288,6 +299,18 @@ h4 {
 
 .imagesIn {
     padding-bottom: 2rem;
+}
+
+.projectFromLeft {
+    transform: translateY(-5vh) translateX(-10vw) rotate(-6deg);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.projectFromRight {
+    transform: translateY(-5vh) translateX(10vw) rotate(6deg);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
 }
 
 @media only screen and (max-width: 900px) {

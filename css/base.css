@@ -205,7 +205,6 @@ aside {
     left: -100vw;
     background-color: rgba(0, 0, 0, 0.815);
     z-index: 100;
-    transition: all 0.4s;
     border-right: 2px solid #021c2c;
 }
 
@@ -219,7 +218,7 @@ aside {
 }
 
 #contact:hover {
-    background-color: rgba(53, 53, 53, 0.479);
+    background-color: rgba(53, 53, 53, 0.315);
     text-decoration: underline;
 }
 
