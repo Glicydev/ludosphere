@@ -1,5 +1,5 @@
 <?php
-require_once './elements.php'
+require_once './util/elements.php'
 ?>
 <!DOCTYPE html>
 <!-- 
@@ -31,7 +31,11 @@ require_once './elements.php'
         <div id="dessusBareFlotaison">
             <img src="./img/circle.png" alt="circleOne" class="circleOne" draggable="false">
             <div class="title">
-                <h2>Who am I <span class="inter">?</span></h2>
+                <h2 id="whoAmI">
+                    <span>W</span><span>h</span><span>o</span> 
+                    <span>a</span><span>m</span> 
+                    <span>I</span> 
+                    <span class="inter">?</span></h2>
             </div>
             <img src="./img/circle.png" alt="circleTwo" class="circleTwo" draggable="false">
             <div class="arrowContainer">
@@ -44,7 +48,7 @@ require_once './elements.php'
                 <p>I am Ludovic, I'm actually 16 years old and I study in CFPT-I in Geneva.</p>
             </div>
             <div class="item col-5 imagesIn">
-                <h4>There are the languages that i know :</h4>
+                <h4>There are the languages that i know&nbsp;:</h4>
                 <div class="images">
                     <div class="row d-flex align-items-center">
                         <div class="imgContainer col">
@@ -86,7 +90,7 @@ require_once './elements.php'
                 </div>
             </div>
             <div class="item col-5 imagesIn">
-                <h4>There are the technologies i use :</h4>
+                <h4>There are the technologies i use&nbsp;:</h4>
                 <div class="images">
                     <div class="row d-flex align-items-center">
                         <div class="imgContainer col">

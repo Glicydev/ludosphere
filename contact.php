@@ -1,5 +1,6 @@
 <?php
-require_once './elements.php';
+require_once './util/elements.php';
+require_once './util/util.php';
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $errors = [];
@@ -26,17 +27,21 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $message = "";
     }
     if (empty($errors)) {
-        echo "Message successfuly sent";
+        $mailsent = ContactSendMail($email, $message, $name);
+        if (!$mailsent)
+            echo "An erro has occured while sending e-mail, try later";
+        else
+            echo "The e-mail has been successfully sent";
     }
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulaire de contact</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/contact.css">
     <script src="./js/script.js" defer></script>

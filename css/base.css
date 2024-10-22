@@ -137,7 +137,7 @@ input[type]:checked~span.middle {
     background-color: rgb(189, 163, 19);
     text-decoration: none;
     color: white;
-    line-height: 1.8rem;
+    line-height: 2rem;
     border-radius: 5px;
     overflow: visible;
     box-shadow: 0 0 5px 2px rgb(189, 163, 19);

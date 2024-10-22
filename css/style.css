@@ -28,6 +28,12 @@ h2 {
     margin-right: 3vw;
 }
 
+#whoAmI span {
+    display: inline-block;
+    opacity: 0;
+    font-weight: bold;
+}
+
 h4 {
     font-size: clamp(1.5rem, 2vw, 1.5rem) !important;
 }
@@ -69,6 +75,7 @@ h4 {
     font-size: 10rem;
     color: #588dff;
     overflow: visible;
+    font-weight: normal;
 }
 
 .circleOne {
@@ -148,6 +155,8 @@ h4 {
     border: 2px solid #002135;
     margin: 3rem 0;
     box-shadow: 0 0 6px 1px #002135;
+    transition: all 0.5s;
+    opacity: 0;
 }
 
 .item * {
@@ -320,5 +329,16 @@ h4 {
 
     .item {
         width: 85vw !important;
+    }
+}
+
+@keyframes charsAnim {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
