@@ -41,6 +41,11 @@ h4 {
     text-align: center;
 }
 
+.presentation p {
+    font-size: 1.2rem !important;
+    font-weight: 100;
+}
+
 .item p {
     font-size: 1.3rem;
 }

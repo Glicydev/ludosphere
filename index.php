@@ -143,7 +143,6 @@ require_once './elements.php'
     </main>
     <footer>
         <p id="footerText"></p>
-        <p id="contactMe" onclick='window.location.href = "./contact.php"'>Contact me</p>
     </footer>
 </body>
 

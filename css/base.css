@@ -209,17 +209,6 @@ aside {
     border-right: 2px solid #021c2c;
 }
 
-#contactMe {
-    margin-top: -2rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-    color: rgb(226, 226, 226)
-}
-
-#contactMe:hover {
-    text-decoration: underline;
-}
-
 #contact {
     margin-top: 20vh;
     width: 100%;
@@ -230,7 +219,7 @@ aside {
 }
 
 #contact:hover {
-    background-color: rgba(53, 53, 53, 0.185);
+    background-color: rgba(53, 53, 53, 0.479);
     text-decoration: underline;
 }
 

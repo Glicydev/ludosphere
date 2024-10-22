@@ -19,4 +19,6 @@ inputs.forEach(inputGroup => {
     const inputInside = inputGroup.querySelector("input")
     inputGroup.addEventListener("click", () => bigInput(inputGroup))
     inputInside.addEventListener("blur", () => handleInput(inputGroup))
+    if (inputInside.value)
+        inputGroup.style.height = "2.5rem"
 });
