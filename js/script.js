@@ -38,6 +38,15 @@ function handleBurgerMenu() {
   burgerMenuOpened = !burgerMenuOpened
 }
 
+function closeBurgerMenu() {
+  if (burgerMenuOpened) {
+    burgerMenu.style.left = `-100vw`
+    burgerButton.click()
+    burgerMenuOpened = false
+  }
+}
+
+document.querySelector("main").addEventListener("click", closeBurgerMenu)
 window.addEventListener("scroll", showScrollTopOrNot)
 
 // Initialize the agent on page load.
