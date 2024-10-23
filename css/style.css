@@ -313,6 +313,43 @@ h4 {
     opacity: 0;
 }
 
+body {
+    height: auto;
+}
+
+.topGsap, .bottomGsap {
+    height: 50vh;
+    width: 100vw;
+    background-color: #0f4b70;
+    position: relative;
+    z-index: 10;
+}
+
+.topGsap {
+    box-shadow: 0 -15px 15px 10px #0f4b70;
+}
+
+.pin-spacer {
+    padding: 0 !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.insideGsapMenu #h {
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.insideGsapMenu .p {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pin-spacer {
+    display: none;
+}
+
 @media only screen and (max-width: 900px) {
     .imagesIn, .presentation {
         width: 60vw !important;

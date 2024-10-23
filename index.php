@@ -14,6 +14,7 @@ require_once './util/elements.php'
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/base.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
     <script src="./js/script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -144,6 +145,14 @@ require_once './util/elements.php'
                     </div>
                     <div class="date">24-06-2024</div>
                 </div>
+            </div>
+            <div class="topGsap"></div>
+            <div class="bottomGsap"></div>
+            <div class="insideGsapMenu">
+                <div id="h">More about me</div>
+                <div class="p">I'm Ludovic, im swiss (from Geneva and from Jura)</div>
+                <div class="p">My favourite part in programmation is frontend</div>
+                <div class="p">I'm actually in my 2nd grade</div>
             </div>
         </div>
     </main>

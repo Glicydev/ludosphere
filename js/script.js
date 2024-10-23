@@ -2,10 +2,13 @@ const footerText = document.getElementById("footerText")
 const today = new Date()
 const year = today.getFullYear()
 const button = document.getElementById("goToTop")
+
 const burgerButton = document.querySelector(".bar")
 const burgerMenu = document.querySelector("aside")
 const burgerMenuSize = burgerMenu.offsetWidth
 let burgerMenuOpened = false;
+
+gsap.registerPlugin(ScrollTrigger)
 
 footerText.innerHTML = `&copy; 2024-${year} Ludosphere. All rights reserved.`
 
@@ -43,7 +46,7 @@ function handleBurgerMenu() {
   else
     gsap.to("aside", {
       left: "0",
-      duration: 0.5,
+      duration: 0.75,
       ease: "circ.out"
     })
   burgerMenuOpened = !burgerMenuOpened
@@ -54,8 +57,8 @@ function closeBurgerMenu() {
   if (burgerMenuOpened) {
     gsap.to("aside", {
       left: "0",
-      duration: 1.5,
-      ease: "bounce"
+      duration: 1.75,
+      ease: "expo.out"
     })
     burgerButton.click()
     burgerMenuOpened = false
@@ -124,6 +127,56 @@ function updateItems() {
     }
   });
 }
+
+const topGsap = document.querySelector(".topGsap")
+const bottomGsap = document.querySelector(".bottomGsap")
+const childrens = document.querySelectorAll(".insideGsapMenu div")
+gsap.fromTo(topGsap, {
+  yPercent: 0,
+}, {
+  yPercent: -110,
+  scrollTrigger: {
+    trigger: topGsap,
+    toggleActions: "none none reverse none",
+    start: "bottom 50%",
+    end: "bottom top",
+    markers: false,
+    scrub: 2,
+    pin: true,
+  }
+});
+
+gsap.fromTo(bottomGsap, {
+  y: 0,
+}, {
+  yPercent: 200,
+  scrollTrigger: {
+    trigger: bottomGsap,
+    toggleActions: "none none reverse none",
+    start: "top 50%",
+    end: "bottom top",
+    markers: false,
+    scrub: 2,
+    pin: true,
+  },
+  onComplete: () => {
+    bottomGsap.style.display = "none"
+  }
+});
+
+gsap.to(childrens, {
+  y: -600,
+  scrollTrigger: {
+    trigger: childrens,
+    toggleActions: "none none reverse none",
+    start: "top bottom",
+    end: "bottom -10vh",
+    markers: false,
+    scrub: 5,
+    pin: true,
+  },
+  stagger: 0.3,
+});
 
 // Animation des items
 updateItems()
