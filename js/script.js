@@ -86,6 +86,7 @@ const items = document.querySelectorAll(".item")
 const projectFromLeft = document.querySelectorAll(".projectFromLeft")
 const projectFromRight = document.querySelectorAll(".projectFromRight")
 
+// Animation du texte principal
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.to("#whoAmI span", {
     y: 0,
@@ -96,6 +97,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   })
 })
 
+// Update des éléments avec la calsse item et tes projets (animation)
 function updateItems() {
   items.forEach(item => {
     let rect = item.getBoundingClientRect();
@@ -128,9 +130,12 @@ function updateItems() {
   });
 }
 
+// Animation du menu ouvrang gsap
 const topGsap = document.querySelector(".topGsap")
 const bottomGsap = document.querySelector(".bottomGsap")
 const childrens = document.querySelectorAll(".insideGsapMenu div")
+
+// Porte du haut
 gsap.fromTo(topGsap, {
   yPercent: 0,
 }, {
@@ -146,6 +151,7 @@ gsap.fromTo(topGsap, {
   }
 });
 
+// Porte du bas
 gsap.fromTo(bottomGsap, {
   y: 0,
 }, {
@@ -164,6 +170,7 @@ gsap.fromTo(bottomGsap, {
   }
 });
 
+// Eléments du menu
 gsap.to(childrens, {
   y: -600,
   scrollTrigger: {
