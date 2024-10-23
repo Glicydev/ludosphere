@@ -136,8 +136,9 @@ const bottomGsap = document.querySelector(".bottomGsap")
 const childrens = document.querySelectorAll(".insideGsapMenu div")
 
 // Porte du haut
-gsap.fromTo(topGsap, {
-  yPercent: 0
+let tl = gsap.timeline()
+tl.fromTo(topGsap, {
+  yPercent: 0,
 }, {
   yPercent: -110,
   scrollTrigger: {
@@ -147,12 +148,12 @@ gsap.fromTo(topGsap, {
     end: "bottom top",
     markers: false,
     scrub: 2,
-    pin: true,
+    pin: true
   }
 });
 
 // Porte du bas
-gsap.fromTo(bottomGsap, {
+tl.fromTo(bottomGsap, {
   y: 0
 }, {
   yPercent: 200,
@@ -164,19 +165,22 @@ gsap.fromTo(bottomGsap, {
     markers: false,
     scrub: 2,
     pin: true,
+    onLeave: () => {
+      bottomGsap.style.display = "none"
+    }
   }
 });
 
 // Eléments du menu
-gsap.to(childrens, {
+tl.to(childrens, {
   y: -600,
   scrollTrigger: {
     trigger: childrens,
-    toggleActions: "play none none none",
+    toggleActions: "play none reverse none",
     start: "top bottom",
     end: "bottom -10vh",
     markers: true,
-    scrub: 5,
+    scrub: 2,
     pin: true,
   },
   stagger: 0.3,

@@ -150,9 +150,9 @@ require_once './util/elements.php'
             <div class="bottomGsap"></div>
             <div class="insideGsapMenu">
                 <div id="h">More about me</div>
-                <div class="p">I'm Ludovic, im swiss (from Geneva and from Jura)</div>
-                <div class="p">My favourite part in programmation is frontend</div>
-                <div class="p">I'm actually in my 2nd grade</div>
+                <div class="p">- I'm Ludovic, im swiss (from Geneva and from Jura)</div>
+                <div class="p">- My favourite part in programmation is frontend</div>
+                <div class="p">- I'm actually in my 2nd grade</div>
             </div>
         </div>
     </main>

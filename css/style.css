@@ -329,10 +329,6 @@ body {
     box-shadow: 0 -15px 15px 10px #0f4b70;
 }
 
-.pin-spacer {
-    padding: 0 !important;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .insideGsapMenu #h {
@@ -344,10 +340,6 @@ body {
 .insideGsapMenu .p {
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
-}
-
-.pin-spacer {
-    display: none;
 }
 
 @media only screen and (max-width: 900px) {
