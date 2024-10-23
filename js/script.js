@@ -147,7 +147,7 @@ tl.fromTo(topGsap, {
     start: "bottom 50%",
     end: "bottom top",
     markers: false,
-    scrub: 2,
+    scrub: 3,
     pin: true
   }
 });
@@ -163,7 +163,7 @@ tl.fromTo(bottomGsap, {
     start: "top 50%",
     end: "bottom top",
     markers: false,
-    scrub: 2,
+    scrub: 3,
     pin: true,
     onLeave: () => {
       bottomGsap.style.display = "none"
@@ -172,18 +172,20 @@ tl.fromTo(bottomGsap, {
 });
 
 // Eléments du menu
-tl.to(childrens, {
-  y: -600,
+tl.fromTo(childrens, {
+  y: -100
+}, {
+  y: -700,
   scrollTrigger: {
     trigger: childrens,
     toggleActions: "play none reverse none",
     start: "top bottom",
     end: "bottom -10vh",
     markers: true,
-    scrub: 2,
+    scrub: 3,
     pin: true,
   },
-  stagger: 0.3,
+  stagger: 1,
 });
 
 // Animation des items
