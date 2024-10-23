@@ -1,7 +1,9 @@
-const footerText = document.getElementById("footerText")
+const button = document.getElementById("goToTop")
 const today = new Date()
 const year = today.getFullYear()
-const button = document.getElementById("goToTop")
+const footerText = document.getElementById("footerText")
+
+footerText.innerHTML = `&copy; 2024-${year} Ludosphere. All rights reserved.`
 
 const burgerButton = document.querySelector(".bar")
 const burgerMenu = document.querySelector("aside")
@@ -9,8 +11,6 @@ const burgerMenuSize = burgerMenu.offsetWidth
 let burgerMenuOpened = false;
 
 gsap.registerPlugin(ScrollTrigger)
-
-footerText.innerHTML = `&copy; 2024-${year} Ludosphere. All rights reserved.`
 
 // Animation du bouton pour revenir en haut de la page
 if (window.scrollY > 1000) {
@@ -130,13 +130,15 @@ function updateItems() {
   });
 }
 
-// Animation du menu ouvrang gsap
+// Animation du menu ouvrant gsap
 const topGsap = document.querySelector(".topGsap")
 const bottomGsap = document.querySelector(".bottomGsap")
 const childrens = document.querySelectorAll(".insideGsapMenu div")
 
 // Porte du haut
-let tl = gsap.timeline()
+const tl = gsap.timeline({
+  invalidateOnRefresh: true
+})
 tl.fromTo(topGsap, {
   yPercent: 0,
 }, {
@@ -149,6 +151,9 @@ tl.fromTo(topGsap, {
     markers: false,
     scrub: 3,
     pin: true
+  },
+  onEnterBack: () => {
+    topGsap.style.position = ""; 
   }
 });
 
@@ -171,21 +176,31 @@ tl.fromTo(bottomGsap, {
   }
 });
 
-// Eléments du menu
-tl.fromTo(childrens, {
-  y: -100
-}, {
-  y: -700,
+const tlChildrens = gsap.timeline({
   scrollTrigger: {
     trigger: childrens,
     toggleActions: "play none reverse none",
     start: "top bottom",
     end: "bottom -10vh",
-    markers: true,
+    markers: false,
     scrub: 3,
-    pin: true,
+    pin: true
   },
-  stagger: 1,
+});
+
+tlChildrens.fromTo(childrens, {
+  y: -100
+}, {
+  y: -800,
+  duration: 80,
+  ease: "power1.inOut",
+  stagger: 5
+})
+.to(childrens, {
+  y: -1250,
+  duration: 20,
+  ease: "power1.out",
+  stagger: 5
 });
 
 // Animation des items

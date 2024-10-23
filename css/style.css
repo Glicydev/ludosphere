@@ -313,33 +313,65 @@ h4 {
     opacity: 0;
 }
 
-body {
-    height: auto;
-}
-
 .topGsap, .bottomGsap {
     height: 50vh;
     width: 100vw;
-    background-color: #0f4b70;
+    background-color: #11547E;
     position: relative;
     z-index: 10;
 }
 
-.topGsap {
-    box-shadow: 0 -15px 15px 10px #0f4b70;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+.insideGsapMenu div {
+    overflow: visible !important;
+}
+
 .insideGsapMenu #h {
-    font-size: 5rem;
+    font-size: clamp(2rem, 4vw + 1rem, 5rem);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    margin-bottom: -10vh;
 }
 
 .insideGsapMenu .p {
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
     font-family: 'Montserrat', sans-serif;
+}
+
+.end {
+    margin-top: 60vh;
+}
+
+.endContact {
+    display: grid;
+    place-items: center;
+}
+
+.endContact a {
+    text-decoration: none;
+    color: white;
+    background-color: #002a44;
+    padding: 5px 1rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    border: 2px solid #003455;
+}
+
+.endContact a:hover {
+    background-color: #003150;
+    transition: all 0.2s;
+    border: 2px solid #003c61;
+    text-decoration: underline;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 200vw;
+    z-index: 999;
 }
 
 @media only screen and (max-width: 900px) {
