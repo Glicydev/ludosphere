@@ -134,6 +134,7 @@ function updateItems() {
 const topGsap = document.querySelector(".topGsap")
 const bottomGsap = document.querySelector(".bottomGsap")
 const childrens = document.querySelectorAll(".insideGsapMenu div")
+const ends = document.querySelectorAll("#end .p")
 
 // Porte du haut
 const tl = gsap.timeline({
@@ -183,24 +184,48 @@ const tlChildrens = gsap.timeline({
     start: "top bottom",
     end: "bottom -10vh",
     markers: false,
-    scrub: 3,
-    pin: true
+    scrub: 2,
+    pin: true,
+    onLeave: () => {
+      childrens.style.display = "none"
+    }
   },
 });
 
 tlChildrens.fromTo(childrens, {
   y: -100
 }, {
-  y: -800,
-  duration: 80,
-  ease: "power1.inOut",
+  y: -1250,
+  duration: 100,
+  ease: "slow(0.7,0.7,true)",
   stagger: 5
 })
-.to(childrens, {
+
+const tlEnds = gsap.timeline({
+  scrollTrigger: {
+    trigger: ends,
+    toggleActions: "play none reverse none",
+    start: "top bottom",
+    end: "bottom -10vh",
+    markers: true,
+    scrub: 3,
+    pin: true
+  },
+});
+
+tlEnds.fromTo(ends, {
+  y: 0
+}, {
+  y: -800,
+  duration: 100,
+  ease: "power1.inOut",
+  stagger: 1
+})
+.to(ends, {
   y: -1250,
-  duration: 20,
+  duration: 10,
   ease: "power1.out",
-  stagger: 5
+  stagger: 1
 });
 
 // Animation des items

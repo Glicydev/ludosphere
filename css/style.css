@@ -314,7 +314,7 @@ h4 {
 }
 
 .topGsap, .bottomGsap {
-    height: 50vh;
+    height: 51vh;
     width: 100vw;
     background-color: #11547E;
     position: relative;
@@ -323,8 +323,8 @@ h4 {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.insideGsapMenu div {
-    overflow: visible !important;
+.insideGsapMenu {
+    overflow: visible;
 }
 
 .insideGsapMenu #h {
@@ -337,15 +337,24 @@ h4 {
 .insideGsapMenu .p {
     font-size: clamp(1rem, 2vw + 1rem, 2rem);
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
-.end {
-    margin-top: 60vh;
+#end {
+    margin-top: -10vh;
+    overflow: visible;
+}
+
+#end .text {
+    font-size: clamp(1rem, 3vw + 1rem, 3rem);
+    text-align: center;
+    max-width: 80vw;
 }
 
 .endContact {
     display: grid;
     place-items: center;
+    overflow: visible;
 }
 
 .endContact a {
@@ -353,25 +362,21 @@ h4 {
     color: white;
     background-color: #002a44;
     padding: 5px 1rem;
-    margin-top: 2rem;
     border-radius: 8px;
     border: 2px solid #003455;
+    width: 15rem;
+    height: 7vh;
+    overflow: visible;
+    font-size: 1.75rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
 }
 
 .endContact a:hover {
     background-color: #003150;
     transition: all 0.2s;
     border: 2px solid #003c61;
-    text-decoration: underline;
-}
-
-svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 200vw;
-    z-index: 999;
 }
 
 @media only screen and (max-width: 900px) {
