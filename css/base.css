@@ -40,7 +40,7 @@ header {
     margin: 0 !important;
     background-color: #01070C;
     height: 10vh;
-    width: 100%;
+    width: 100vw;
     padding-left: 2rem;
     display: flex;
     align-items: center;
@@ -58,7 +58,8 @@ main {
 
 header>img {
     position: absolute;
-    right: 4vw;
+    right: 2vw;
+    height: 110%;
 }
 
 /* Burger icon */
@@ -225,6 +226,7 @@ aside {
 
 #titlePage {
     cursor: pointer;
+    z-index: 1;
 }
 
 @media only screen and (max-width: 1300px) {

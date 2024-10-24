@@ -16,7 +16,7 @@ function placeBase()
         </label>
         <h1 id="titlePage" onclick='window.location.href = "./index.php"'>Ludosphere.ch</h1>
         <a href="https://donate.stripe.com/9AQaHLb5xfbB9nGbII" class="donate" target="_blank">Donate</a>
-        <img src="./img/logoExample.png" alt="logo">
+        <img src="./img/logo.png" alt="logo">
     </header>
     <aside>
         <div id="contact" onclick='window.location.href = "./contact.php"'>Contact me</div>

@@ -16,8 +16,7 @@ gsap.registerPlugin(ScrollTrigger)
 if (window.scrollY > 1000) {
   button.style.opacity = "1"
   button.disabled = false;
-}
-else {
+} else {
   button.style.opacity = "0"
   button.disabled = true;
 }
@@ -182,7 +181,7 @@ const tlChildrens = gsap.timeline({
     trigger: childrens,
     toggleActions: "play none reverse none",
     start: "top bottom",
-    end: "bottom -10vh",
+    end: "bottom 10vh",
     markers: false,
     scrub: 2,
     pin: true,
@@ -207,7 +206,7 @@ const tlEnds = gsap.timeline({
     toggleActions: "play none reverse none",
     start: "top bottom",
     end: "bottom -10vh",
-    markers: true,
+    markers: false,
     scrub: 3,
     pin: true
   },
@@ -222,8 +221,8 @@ tlEnds.fromTo(ends, {
   stagger: 1
 })
 .to(ends, {
-  y: -1250,
-  duration: 10,
+  y: -1350,
+  duration: 20,
   ease: "power1.out",
   stagger: 1
 });

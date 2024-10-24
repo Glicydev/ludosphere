@@ -2,12 +2,17 @@
 require_once './util/elements.php';
 require_once './util/util.php';
 
+$errors = [
+    "name" => "",
+    "email" => "",
+    "message" => ""
+];
+$confirmationMessage = "";
+
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
-    $errors = [];
     $name = trim(filter_input(INPUT_POST, "name", FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $email = trim(filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL));
     $message = trim(filter_input(INPUT_POST, "message", FILTER_SANITIZE_FULL_SPECIAL_CHARS));
-    $confirmationMessage = "";
 
     if (empty($name)) {
         $errors["name"] = "Your name is invalid";
@@ -58,20 +63,20 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <?= placeBase() ?>
     <main>
         <div class="confirmation">
-            <?= isset($confirmationMessage) ? $confirmationMessage : "" ?>
+            <?= $confirmationMessage ? $confirmationMessage : "" ?>
         </div>
         <form method="POST">
             <h1>Contact me</h1>
             <div class="inputGrp">
-                <label for="name">Name *</label>
+                <label for="name">Name * <span><?= $errors["name"] ?></span></label>
                 <input type="text" name="name" value="<?= isset($name) ? $name : "" ?>">
             </div>
             <div class="inputGrp">
-                <label for="email">Email *</label>
+                <label for="email">Email * <span><?= $errors["email"] ?></span></label>
                 <input type="email" name="email" value="<?= isset($email) ? $email : "" ?>">
             </div>
             <div class="messageGrp">
-                <label for="message">Message *</label>
+                <label for="message">Message * <span><?= $errors["message"] ?></span></label>
                 <textarea type="text" name="message"><?= isset($message) ? $message : "" ?></textarea>
             </div>
             <input type="submit" value="Submit">

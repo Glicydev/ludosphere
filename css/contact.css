@@ -93,6 +93,11 @@ input[type="submit"]:hover {
     font-size: clamp(2rem, 3vh, 4rem);
 }
 
+form span {
+    color: rgb(255, 92, 92);
+    margin-left: 2rem;
+}
+
 @media only screen and (max-width: 1300px) {
     form {
         width: 40vw;
