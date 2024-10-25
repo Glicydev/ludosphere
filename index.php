@@ -22,6 +22,7 @@ require_once './util/elements.php'
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
     <meta name="description" content="An website about myself">
+    <link rel="shortcut icon" href="https://cdn.ludosphere.ch/img/logo.png" type="image/png" />
 </head>
 
 <body>
