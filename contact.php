@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="./js/script.js" defer></script>
     <script src="./js/contact.js" defer></script>
+    <link rel="shortcut icon" href="https://cdn.ludosphere.ch/img/logo.png" type="image/png" />
 </head>
 
 <body>
