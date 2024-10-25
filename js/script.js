@@ -3,7 +3,8 @@ const today = new Date()
 const year = today.getFullYear()
 const footerText = document.getElementById("footerText")
 
-footerText.innerHTML = `&copy; 2024-${year} Ludosphere. All rights reserved.`
+if (footerText)
+  footerText.innerHTML = `&copy; 2024-${year} Ludosphere. All rights reserved.`
 
 const burgerButton = document.querySelector(".bar")
 const burgerMenu = document.querySelector("aside")
@@ -49,6 +50,7 @@ function handleBurgerMenu() {
       ease: "circ.out"
     })
   burgerMenuOpened = !burgerMenuOpened
+  console.log("menu changed")
 }
 
 // Fermer le menu burger
@@ -153,7 +155,7 @@ tl.fromTo(topGsap, {
     pin: true
   },
   onEnterBack: () => {
-    topGsap.style.position = ""; 
+    topGsap.style.position = "";
   }
 });
 
@@ -220,12 +222,12 @@ tlEnds.fromTo(ends, {
   ease: "power1.inOut",
   stagger: 1
 })
-.to(ends, {
-  y: -1350,
-  duration: 20,
-  ease: "power1.out",
-  stagger: 1
-});
+  .to(ends, {
+    y: -1350,
+    duration: 20,
+    ease: "power1.out",
+    stagger: 1
+  });
 
 // Animation des items
 updateItems()

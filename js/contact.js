@@ -19,7 +19,7 @@ function handleInput(inputGroup) {
         inputGroup.style.height = "1.3rem"
 }
 
-// Gère l'affichage des inputs au click er au unfocus
+// Gère l'affichage des inputs au click et au unfocus
 inputs.forEach(inputGroup => {
     const inputInside = inputGroup.querySelector("input")
     inputGroup.addEventListener("click", () => bigInput(inputGroup))
