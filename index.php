@@ -127,7 +127,7 @@ require_once './util/elements.php'
                         to have more experience in projects</div>
                     <div class="date">27-06-2024</div>
                 </div>
-                <div class="project col-4 projectFromRight">
+                <div class="project col-4 projectFromRight projectWithLink">
                     <div class="finished">Finished</div>
                     <h3 class="projectTitle">Website about Servette FC</h3>
                     <img src="img/projets/servette.PNG" alt="servette FC">
@@ -153,7 +153,7 @@ require_once './util/elements.php'
                 <div class="p">- I'm Ludovic, im swiss (from Geneva and from Jura)</div>
                 <div class="p">- My favourite part in programmation is frontend</div>
                 <div class="p">- I'm actually in my 2nd grade</div>
-                <div class="p">- I love Italian ans Swiss food</div>
+                <div class="p">- I love Italian and Swiss food</div>
             </div>
             <div id="end">
                 <div class="p text">That's all! i hope you liked my website! If you did, you can contact me down here &darr;</div>
