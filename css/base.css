@@ -210,7 +210,7 @@ aside {
     border-right: 2px solid #021c2c;
 }
 
-#contact {
+#contact, #donateNav {
     margin-top: 20vh;
     width: 100%;
     font-size: clamp(1.5rem, 2vw, 1.75rem);
@@ -219,7 +219,11 @@ aside {
     padding: 5px 0;
 }
 
-#contact:hover {
+#donateNav {
+    margin-top: 3vh;
+}
+
+#contact:hover,  #donateNav:hover {
     background-color: rgba(53, 53, 53, 0.315);
     text-decoration: underline;
 }
@@ -241,6 +245,12 @@ aside {
     }
     #goToTop {
         right: 5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header>img {
+        display: none;
     }
 }
 

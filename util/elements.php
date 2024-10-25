@@ -1,10 +1,11 @@
 <?php
+
 /**
  * Place la base de la page web
  * 
  * @return void
  */
-function placeBase()
+function placeBase(): void
 {
 ?>
     <header>
@@ -20,6 +21,7 @@ function placeBase()
     </header>
     <aside>
         <div id="contact" onclick='window.location.href = "./contact.php"'>Contact me</div>
+        <div id="donateNav" onclick='window.location.href = "https://donate.stripe.com/9AQaHLb5xfbB9nGbII"'>Donate me</div>
     </aside>
 <?php
 }
