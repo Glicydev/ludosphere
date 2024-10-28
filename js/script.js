@@ -11,6 +11,21 @@ const burgerMenu = document.querySelector("aside")
 const burgerMenuSize = burgerMenu.offsetWidth
 let burgerMenuOpened = false;
 
+function firstArrowScroll() {
+  const dessous = document.querySelector(".dessous");
+
+  if (dessous) {
+    const rect = dessous.getBoundingClientRect();
+    const to = rect.top + window.scrollY + 5;
+    window.scrollTo({
+      top: to,
+      behavior: "smooth"
+    })
+  } else {
+    console.log("Dessous n'existe pas")
+  }
+}
+
 gsap.registerPlugin(ScrollTrigger)
 
 // Animation du bouton pour revenir en haut de la page

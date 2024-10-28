@@ -29,10 +29,10 @@ require_once './util/elements.php'
     <?= placeBase() ?>
     <main>
         <button id="goToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-            <img src="img/arrowTop.png" draggable="false"></img>
+            <img src="https://cdn.ludosphere.ch/img/arrowTop.png" draggable="false"></img>
         </button>
         <div id="dessusBareFlotaison">
-            <img src="./img/circle.png" alt="circleOne" class="circleOne" draggable="false">
+            <img src="https://cdn.ludosphere.ch/img/circle.png" alt="circleOne" class="circleOne" draggable="false">
             <div class="title">
                 <h2 id="whoAmI">
                     <span>W</span><span>h</span><span>o</span>
@@ -41,9 +41,11 @@ require_once './util/elements.php'
                     <span class="inter">?</span>
                 </h2>
             </div>
-            <img src="./img/circle.png" alt="circleTwo" class="circleTwo" draggable="false">
+            <img src="https://cdn.ludosphere.ch/img/circle.png" alt="circleTwo" class="circleTwo" draggable="false">
             <div class="arrowContainer">
-                <div class="arrow"></div>
+                <div class="squareForArrow" onclick="firstArrowScroll()">
+                    <div class="arrow"></div>
+                </div>
             </div>
         </div>
         <div class="dessous row-9 d-flex flex-column align-items-center">
@@ -56,39 +58,39 @@ require_once './util/elements.php'
                 <div class="images">
                     <div class="row d-flex align-items-center">
                         <div class="imgContainer col">
-                            <img src="./img/languages/csharp.png" alt="csharp" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/csharp.png" alt="csharp" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/javascript.png" alt="js" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/javascript.png" alt="js" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/html.png" alt="html" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/html.png" alt="html" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/css.png" alt="css" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/css.png" alt="css" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/php.png" alt="php" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/php.png" alt="php" draggable="false">
                         </div>
                     </div>
                     <div class="row">
                         <div class="imgContainer col">
-                            <img src="./img/languages/mysql.png" alt="mysql" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/mysql.png" alt="mysql" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/react.png" alt="react" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/react.png" alt="react" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/typescript.png" alt="typscript" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/typescript.png" alt="typscript" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/mariadb.png" alt="mariadb" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/mariadb.png" alt="mariadb" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/cpp.png" alt="cpp" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/cpp.png" alt="cpp" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/languages/nodejs.png" alt="nodejs" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/languages/nodejs.png" alt="nodejs" draggable="false">
                         </div>
                     </div>
                 </div>
@@ -98,22 +100,22 @@ require_once './util/elements.php'
                 <div class="images">
                     <div class="row d-flex align-items-center">
                         <div class="imgContainer col">
-                            <img src="./img/tech/visualStudioCode.png" alt="vsCode" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/tech/visualStudioCode.png" alt="vsCode" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/tech/visualStudio2022.png" alt="vs2022" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/tech/visualStudio2022.png" alt="vs2022" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/tech/linux.png" alt="linux" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/tech/linux.png" alt="linux" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/tech/bash.png" alt="bash" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/tech/bash.png" alt="bash" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/tech/docker.png" alt="docker" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/tech/docker.png" alt="docker" draggable="false">
                         </div>
                         <div class="imgContainer col">
-                            <img src="./img/tech/xampp.png" alt="xampp" draggable="false">
+                            <img src="https://cdn.ludosphere.ch/img/tech/xampp.png" alt="xampp" draggable="false">
                         </div>
                     </div>
                 </div>
@@ -123,7 +125,7 @@ require_once './util/elements.php'
                 <div class="project col-4 projectFromLeft">
                     <div class="doing">Under construction</div>
                     <h3 class="projectTitle">Mellowize</h3>
-                    <img src="img/projets/mellowize.PNG" alt="Mellowize">
+                    <img src="https://cdn.ludosphere.ch/img/projets/mellowize.PNG" alt="Mellowize">
                     <div class="desc">An advanced website / application where you can hear & upload songs to calm, made
                         to have more experience in projects</div>
                     <div class="date">27-06-2024</div>
@@ -131,17 +133,17 @@ require_once './util/elements.php'
                 <div class="project col-4 projectFromRight projectWithLink">
                     <div class="finished">Finished</div>
                     <h3 class="projectTitle">Website about Servette FC</h3>
-                    <img src="img/projets/servette.PNG" alt="servette FC">
+                    <img src="https://cdn.ludosphere.ch/img/projets/servette.PNG" alt="servette FC">
                     <div class="desc">An basic website about Servette FC that I made for a school project</div>
                     <div class="date">27-06-2024</div>
                     <a href="https://ludoit.ch/servette" target="_blank" class="goToPage">
-                        <img draggable="false" src="img/newPage.png" alt="">
+                        <img draggable="false" src="https://cdn.ludosphere.ch/img/newPage.png" alt="">
                     </a>
                 </div>
                 <div class="project col-4 projectFromLeft">
                     <div class="finished">Finished</div>
                     <h3 class="projectTitle">Wirewolf game</h3>
-                    <img src="img/projets/servette.PNG" alt="wirewolf">
+                    <img src="https://cdn.ludosphere.ch/img/projets/servette.PNG" alt="wirewolf">
                     <div class="desc">An wirewolf game made in c# windows form, using classes for an school project.
                     </div>
                     <div class="date">24-06-2024</div>

@@ -111,6 +111,15 @@ h4 {
     width: 5rem;
 }
 
+.squareForArrow {
+    position: absolute;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    left: calc(50vw - 2.5rem);
+    overflow: visible;
+}
+
 .arrow::before,
 .arrow::after {
     content: "";
